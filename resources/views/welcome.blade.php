@@ -20,5 +20,44 @@
             <a href="{{ route('home') }}" class="icon"><i class="fas fa-lock"></i></a>
         </div>
     </nav>
+
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3>NorthStar</h3>
+            <p><i class="fas fa-phone"></i> +95 234548594</p>
+            <p><i class="fas fa-envelope"></i> krist@example.com</p>
+          </div>
+      
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h4>Quick Link</h4>
+            <ul>
+              <li><a href="#">Payment Options</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Privacy Policies</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h4>Payment Information</h4>
+            <div class="payment-icons">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="MasterCard" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Google_Pay_Logo.svg" alt="GPay" />
+            </div>
+          </div>
+        </div>
+      </footer>
+      
 </body>
 </html>

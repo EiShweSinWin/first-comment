@@ -25,6 +25,9 @@
     --color-primary: #224f34;
     --border-radius: 0.3rem;
     --spacing: 1rem;
+
+
+	--width-size:2rem;
 }
 
 /* Normalize and Reset Styles */
@@ -81,7 +84,7 @@ table {
     border-spacing: 0;
 }
 
-
+/* app bar */
 .app-bar {
 	background-color: var(--bg-secondary);
 	display: flex;
@@ -119,4 +122,64 @@ table {
 
  .user-icons .icon:hover i {
     color: var(--text-black);
+}
+/* footer */
+.footer {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    padding: var(--padding-2xl) var(--padding-xl);
+    font-family: var(--font-family);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: var(--padding-lg);
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: var(--padding-lg);
+}
+
+.footer-column h3,
+.footer-column h4 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--padding-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: var(--font-size-md);
+    margin: var(--padding-xxs) 0;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--padding-xs);
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+    color: var(--text-secondary);
+}
+
+.footer-column i {
+    font-size: var(--font-size-md);
+}
+.payment-icons {
+	display: flex;
+}
+.payment-icons img {
+    width: var(--width-size);
+    height: var(--font-size-xl);
+    margin-right: var(--padding-xs);
+    border-radius: var(--border-radius);
+    background: #fff;
+    padding: 2px;
 }
