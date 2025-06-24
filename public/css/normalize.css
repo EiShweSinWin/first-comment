@@ -228,3 +228,106 @@ table {
 	margin-right: var(--padding-sm);
 	font-size: var(--font-size-md);
 }
+/* form */
+
+.form-container {
+	text-align: center;
+	padding: var(--padding-xl);
+	background: #fff;
+	border-radius: var(--border-radius);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+	display: flex;
+	align-items: center;
+	width: 400px;
+	gap: var(--padding-md);
+}
+.form-group label {
+	display: block;
+	font-size: var(--font-size-md);
+	color: var(--color-primary);
+	margin-bottom: var(--padding-xs);
+	text-align: left;
+}
+
+.form-group input {
+	width: 100%;
+	max-width: 400px;
+	padding: var(--padding-sm);
+	font-size: var(--font-size-md);
+	border: 1px solid #ccc;
+	border-radius: var(--border-radius);
+	margin-bottom: var(--padding-md);
+}
+/* button */
+.btn-group {
+	margin-top: var(--padding-lg);
+}
+
+.btn {
+	padding: var(--padding-sm) var(--padding-md);
+	border: none;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	font-size: var(--font-size-md);
+	margin: 0 var(--padding-xs);
+}
+
+.btn-register {
+	background: var(--bg-primary);
+	color: var(--text-primary);
+}
+
+.btn-cancel {
+	background: #fff;
+	color: var(--color-primary);
+	border: 1px solid var(--color-primary);
+}
+/* file upload */
+.file-upload {
+	display: flex;
+	align-items: center;
+	width: 400px;
+	margin-bottom: var(--padding-md);
+}
+
+.file-upload label {
+	font-size: var(--font-size-md);
+	color: var(--color-primary);
+	flex: 1;
+	min-width: 0;
+}
+
+.file-upload .custom-file-input {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.file-upload .custom-file-input input[type="file"] {
+	display: none;
+}
+
+.file-upload .custom-file-input .btn-choose {
+	background: var(--bg-primary);
+	color: var(--text-primary);
+	padding: var(--padding-sm) var(--padding-md);
+	border: none;
+	border-radius: var(--border-radius) 0 0 var(--border-radius);
+	cursor: pointer;
+	font-size: var(--font-size-md);
+}
+
+.file-upload .custom-file-input .file-name {
+	flex: 2;
+	padding: var(--padding-sm);
+	font-size: var(--font-size-md);
+	border: 1px solid #ccc;
+	border-left: none;
+	border-radius: 0 var(--border-radius) var(--border-radius) 0;
+	background: #e9ecef;
+	color: #888;
+	width: 100%;
+}
+/* table */

@@ -23,7 +23,34 @@
             </nav>
         </aside>
         <main style="flex: 1; background: var(--bg-secondary); padding: var(--padding-lg);">
-          
+            <div class="form-container">
+
+                <div class="file-upload">
+                    <span class="icon"><i class="fas fa-user"></i></span>
+                    <label for="profile-image">Profile Image</label>
+                    <div class="custom-file-input">
+                        <input type="file" id="profile-image" accept="image/*">
+                        <button class="btn-choose" onclick="document.getElementById('profile-image').click()">Choose File</button>
+                        <span class="file-name">No File Chosen</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="category-name">Name</label>
+                    <input type="text" id="category-name" placeholder="Enter Category Name">
+                </div>
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select id="role">
+                        <option value="" disabled selected>Select</option>
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+                    </select>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-register">Register</button>
+                    <button class="btn btn-cancel">Cancel</button>
+                </div>
+            </div>
         </main>
     </div>
 </body>
