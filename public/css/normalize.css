@@ -28,6 +28,7 @@
 
 
 	--width-size:2rem;
+	--height-size: 1.5rem;
 }
 
 /* Normalize and Reset Styles */
@@ -177,9 +178,53 @@ table {
 }
 .payment-icons img {
     width: var(--width-size);
-    height: var(--font-size-xl);
+    height: var(--height-size);
     margin-right: var(--padding-xs);
     border-radius: var(--border-radius);
     background: #fff;
-    padding: 2px;
+    padding: var(--padding-xxs);
+}
+/* admin side bar */
+.admin-container {
+	display: flex;
+	min-height: 100vh;
+}
+
+.sidebar {
+	width: 250px;
+	background: #fff;
+	padding: var(--padding-lg) 0;
+	border-right: 1px solid #ddd;
+}
+
+.logo {
+	font-size: var(--font-size-xl);
+	color: var(--color-primary);
+	padding: var(--padding-md);
+	margin-bottom: var(--padding-lg);
+	text-align: center;
+}
+.sidebar-links {
+	list-style: none;
+}
+
+.sidebar-links a {
+	display: flex;
+	align-items: center;
+	padding: var(--padding-sm) var(--padding-md);
+	color: var(--color-primary);
+	text-decoration: none;
+	margin-bottom: var(--padding-xs);
+	transition: background 0.3s;
+}
+
+.sidebar-links a:hover,
+.sidebar-links a.active {
+	background: var(--bg-secondary);
+	border-radius: var(--border-radius);
+}
+
+.sidebar-links a i {
+	margin-right: var(--padding-sm);
+	font-size: var(--font-size-md);
 }
