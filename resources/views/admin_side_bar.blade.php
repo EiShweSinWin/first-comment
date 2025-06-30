@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  />
-    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
    
 </head>
 <body>
@@ -39,12 +39,8 @@
                     <input type="text" id="category-name" placeholder="Enter Category Name">
                 </div>
                 <div class="form-group">
-                    <label for="role">Role</label>
-                    <select id="role">
-                        <option value="" disabled selected>Select</option>
-                        <option value="admin">Admin</option>
-                        <option value="user">User</option>
-                    </select>
+                    <label for="category-name">Description</label>
+                    <input type="text" id="category-name" placeholder="Enter Category Description">
                 </div>
                 <div class="btn-group">
                     <button class="btn btn-register">Register</button>

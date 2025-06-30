@@ -1,0 +1,57 @@
+:root {
+    /* Padding scale */
+    --padding-xxs: 0.25rem; /* 4px */
+    --padding-xs: 0.5rem; /* 8px */
+    --padding-sm: 0.75rem; /* 12px */
+    --padding-md: 1rem; /* 16px */
+    --padding-lg: 1.5rem; /* 24px */
+    --padding-xl: 2rem; /* 32px */
+    --padding-2xl: 3rem; /* 48px */
+    --bg-primary: #224f34;
+    --bg-secondary: #c2efd4;
+    --font-family: "Poppins", sans-serif;
+    --font-size-xs: 0.625rem; /* 10px */
+    --font-size-sm: 0.75rem; /* 12px */
+    --font-size-md: 1rem; /* 16px */
+    --font-size-lg: 1.25rem; /* 20px */
+    --font-size-xl: 1.5rem; /* 24px */
+    --font-size-2xl: 1.8rem; /* 28px */
+    --font-size-3xl: 2rem; /* 32px */
+
+
+    --line-height-base: 1.5;
+    --text-black: #000000;
+    --text-primary: #ffffff;
+    --text-secondary: #c2efd4;
+    --color-primary: #224f34;
+    --border-radius: 0.3rem;
+    --spacing: 1rem;
+
+
+	--width-size:2rem;
+	--height-size: 1.5rem;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: var(--padding-lg);
+}
+
+.header h1 {
+	font-size: var(--font-size-2xl);
+	color: var(--color-primary);
+}
+th {
+	cursor: pointer;
+	position: relative;
+}
+th i {
+	margin-left: 5px;
+}
+.sorted-asc i {
+	content: "\f0de";
+}
+.sorted-desc i {
+	content: "\f0dd";
+}
