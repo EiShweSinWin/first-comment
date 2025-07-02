@@ -1,0 +1,38 @@
+.form-container {
+    text-align: center;
+    padding: var(--padding-xl);
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.btn-group {
+    margin-top: var(--padding-lg);
+    display: flex;
+    justify-content: center;
+    gap: var(--padding-md);
+}
+
+.btn-register {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    padding: var(--padding-sm) var(--padding-md);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: var(--font-size-md);
+}
+
+.btn-cancel {
+    background: #fff;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    padding: var(--padding-sm) var(--padding-md);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: var(--font-size-md);
+    text-decoration: none;
+    display: inline-block;
+}

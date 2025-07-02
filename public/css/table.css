@@ -1,0 +1,81 @@
+main {
+    flex: 1;
+    background: var(--bg-secondary);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.search-bar {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.table-container {
+    background: #fff;
+    padding: var(--padding-md);
+    border-radius: var(--border-radius);
+    margin: var(--padding-md);
+    flex: 1;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: var(--padding-sm);
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #f5f5f5;
+    color: #666;
+    font-weight: normal;
+}
+
+td img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.pagination {
+    margin-top: var(--padding-md);
+    display: flex;
+    justify-content: center;
+    gap: var(--padding-xs);
+}
+
+.pagination button {
+    padding: var(--padding-xs) var(--padding-sm);
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+}
+
+.icon {
+    padding: var(--padding-xl);
+}

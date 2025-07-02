@@ -1,0 +1,42 @@
+.form-container {
+    background: #fff;
+    padding: var(--padding-xl);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-input,
+.form-select {
+    width: 100%;
+    padding: var(--padding-sm) var(--padding-md);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--padding-md);
+    font-size: var(--font-size-md);
+}
+
+.login-button {
+    background-color: var(--color-primary);
+    color: var(--text-primary);
+    padding: var(--padding-sm);
+    width: 100%;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-button:hover {
+    background-color: #2d6a4f; /* or define another variable like --color-primary-hover */
+}
+
+.text-link {
+    font-size: var(--font-size-sm);
+    color: #555;
+}
+
+.text-link a {
+    color: var(--color-primary);
+    font-weight: 500;
+}

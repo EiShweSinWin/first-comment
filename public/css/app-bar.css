@@ -1,0 +1,36 @@
+.header-section {
+    background-color: var(--card-background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-medium);
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    top: 0;
+    left: 250px; /* Adjust for sidebar width */
+    width: calc(100% - 250px);
+    z-index: 1000;
+}
+
+.header-title {
+    font-size: var(--font-size-large);
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-small);
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-role {
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+}

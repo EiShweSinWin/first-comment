@@ -1,0 +1,26 @@
+.btn {
+    padding: var(--padding-small) var(--padding-medium);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: var(--font-size-medium);
+}
+
+.btn-register {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-register:hover {
+    background: #205723; /* Darker green */
+}
+
+.btn-cancel {
+    background: #fff;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-cancel:hover {
+    background: var(--background-color);
+}
