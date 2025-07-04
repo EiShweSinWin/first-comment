@@ -1,12 +1,13 @@
 @extends('layouts.app')
-
+@section('page_title', 'Order List')
 @section('content')
-    <h1 class="text-2xl font-bold mb-4">Order List</h1>
-    <div class="mb-4">
-        <input type="text" placeholder="Search" class="search-bar">
-    </div>
-    <div class="table-container">
-        <table>
+   
+<form method="GET" action="{{ route('admin.orders') }}" class="search-form">
+    <input type="text" name="search" value="{{ request('search') }}" placeholder="Search Orders.." />
+    <button type="submit"><i class="fas fa-search"></i></button>
+</form>
+    <div class="table-card">
+        <table class="user-table">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -38,10 +39,12 @@
         </table>
     </div>
     <div class="pagination">
-        <button>Previous</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>Next</button>
+        <button class="pagination-arrow">&lt;</button>
+        <button class="pagination-item active">1</button>
+        <button class="pagination-item">2</button>
+        <button class="pagination-item">3</button>
+        <span class="pagination-ellipsis">...</span>
+        <button class="pagination-item">40</button>
+        <button class="pagination-arrow">&gt;</button>
     </div>
 @endsection

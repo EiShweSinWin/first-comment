@@ -1,42 +1,63 @@
 @extends('layouts.app')
 
+@section('page_title', 'Customers List')
+
 @section('content')
-    <h2 class="section-title">Customer List</h2>
-    <a href="{{ route('admin.users.create') }}" class="btn btn-primary">New</a>
-    <div class="search-container">
-        <input type="text" placeholder="Search" class="search-input">
+
+<div class="user-list-container">
+    <div class="user-list-controls">
+        <a href="{{ route('admin.users.create') }}" class="btn-new">
+            <i class="fas fa-plus icon"></i> New
+        </a>
+
+        <form method="GET" action="{{ route('admin.users') }}" class="search-form">
+            <input type="text" name="search" value="{{ request('search') }}" placeholder="Search users..." />
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        
+      
     </div>
-    <div class="table-container">
-        <table class="data-table">
+
+    <div class="table-card">
+        <table class="user-table">
             <thead>
                 <tr>
-                    <th class="table-header">ID</th>
-                    <th class="table-header">Customer Name</th>
-                    <th class="table-header">Email</th>
-                    <th class="table-header">Address</th>
-                    <th class="table-header">Phone</th>
-                    <th class="table-header">Last Login</th>
+                    <th>ID <i class="fas fa-sort sort-icon"></i></th>
+                    <th>User Name <i class="fas fa-sort sort-icon"></i></th>
+                    <th>Email <i class="fas fa-sort sort-icon"></i></th>
+                    
+                    <th>Address <i class="fas fa-sort sort-icon"></i></th>
+                    <th>Phone <i class="fas fa-sort sort-icon"></i></th>
+                    <th>Last Login <i class="fas fa-sort sort-icon"></i></th>
                 </tr>
             </thead>
             <tbody>
+              
+
                 @foreach($customers as $customer)
-                    <tr class="table-row">
-                        <td class="table-cell">{{ $customer->id }}</td>
-                        <td class="table-cell">{{ $customer->name }}</td>
-                        <td class="table-cell">{{ $customer->email }}</td>
-                        <td class="table-cell">{{ $customer->address }}</td>
-                        <td class="table-cell">{{ $customer->phone }}</td>
-                        <td class="table-cell">{{ $customer->last_login }}</td>
+                    <tr>
+                        <td>{{ $customer->id }}</td>
+                        <td>{{ $customer->name }}</td>
+                        <td>{{ $customer->email }}</td>
+                    
+                        <td>{{ $customer->address }}</td>
+                        <td>{{ $customer->phone }}</td>
+                        <td>{{ $customer->last_login }}</td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
-    <div class="pagination-container">
-        <button class="pagination-btn">Previous</button>
-        <button class="pagination-btn">1</button>
-        <button class="pagination-btn">2</button>
-        <button class="pagination-btn">3</button>
-        <button class="pagination-btn">Next</button>
+
+    <div class="pagination">
+        <button class="pagination-arrow">&lt;</button>
+        <button class="pagination-item active">1</button>
+        <button class="pagination-item">2</button>
+        <button class="pagination-item">3</button>
+        <span class="pagination-ellipsis">...</span>
+        <button class="pagination-item">40</button>
+        <button class="pagination-arrow">&gt;</button>
     </div>
+</div>
+
 @endsection

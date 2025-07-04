@@ -26,12 +26,34 @@ class AdminController extends Controller
     }
 
    
-
-    public function users()
+    public function users(Request $request)
     {
-        $users = User::all();
+        $query = User::query();
+    
+        // 🔍 Search
+        if ($request->has('search')) {
+            $search = $request->get('search');
+            $query->where(function ($q) use ($search) {
+                $q->where('name', 'like', "%{$search}%")
+                  ->orWhere('email', 'like', "%{$search}%")
+                  ->orWhere('role', 'like', "%{$search}%")
+                  ->orWhere('phone', 'like', "%{$search}%")
+                  ->orWhere('address', 'like', "%{$search}%");
+            });
+        }
+    
+        // 🔃 Sorting
+        $sortBy = $request->get('sort_by', 'id');
+        $sortOrder = $request->get('sort_order', 'asc');
+        $query->orderBy($sortBy, $sortOrder);
+    
+      
+        $users = $query->paginate(10)->appends($request->query());
+    
         return view('admin.users', compact('users'));
     }
+    
+   
 
     public function customers()
     {
@@ -39,15 +61,39 @@ class AdminController extends Controller
         return view('admin.customers', compact('customers'));
     }
 
-    public function products()
+    public function products(Request $request)
     {
-        $products = Product::with('category')->get();
+        $query = Product::query()->with('category');
+    
+       
+        if ($request->has('search')) {
+            $search = $request->get('search');
+            $query->where(function ($q) use ($search) {
+                $q->where('name', 'like', "%{$search}%")
+                  ->orWhere('code', 'like', "%{$search}%")
+                  ->orWhereHas('category', function ($categoryQuery) use ($search) {
+                      $categoryQuery->where('name', 'like', "%{$search}%");
+                  });
+            });
+        }
+    
+        $products = $query->get();
+    
         return view('admin.products', compact('products'));
     }
 
-    public function categories()
+    public function categories(Request $request)
     {
-        $categories = Category::all();
+        $query = Category::query();
+    
+        // 🔍 Search
+        if ($request->has('search')) {
+            $search = $request->get('search');
+            $query->where('name', 'like', "%{$search}%");
+        }
+    
+        $categories = $query->get();
+    
         return view('admin.categories', compact('categories'));
     }
 

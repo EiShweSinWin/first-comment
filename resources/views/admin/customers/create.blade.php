@@ -1,7 +1,7 @@
 @extends('layouts.app')
-
+@section('page_title', 'User Register')
 @section('content')
-    <h1 class="text-2xl font-bold mb-4">User Register</h1>
+   
     <div class="form-container">
         <form method="POST" action="{{ route('admin.users.store') }}">
             @csrf

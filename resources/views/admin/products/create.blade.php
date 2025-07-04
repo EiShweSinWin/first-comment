@@ -1,31 +1,56 @@
 @extends('layouts.app')
-
+@section('page_title', 'Product Register')
 @section('content')
-    <h1 class="text-2xl font-bold mb-4">Product Register</h1>
+   
     <div class="form-container">
         <form method="POST" action="{{ route('admin.products.store') }}">
             @csrf
             <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" required>
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" id="name" value="{{ old('name') }}" class="form-control" required>
+                @error('name')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+               
             </div>
             <div class="form-group">
-                <label for="code">Code</label>
-                <input type="text" name="code" id="code" required>
+                <label for="name" class="form-label">Code</label>
+                <input type="text" name="code" id="code" value="{{ old('code') }}" class="form-control" required>
+                @error('code')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+                
             </div>
             <div class="form-group">
-                <label for="purchase_price">Purchase Price</label>
-                <input type="number" name="purchase_price" id="purchase_price" step="0.01" required>
+                <label for="name" class="form-label">Purchase Price</label>
+                <input type="text" name="purchase_price" id="purchase_price" value="{{ old('code') }}" class="form-control" required>
+                @error('code')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+
             </div>
             <div class="form-group">
-                <label for="sale_price">Sale Price</label>
-                <input type="number" name="sale_price" id="sale_price" step="0.01" required>
+                <label for="name" class="form-label">Sale Price</label>
+                <input type="text" name="sale_price" id="sale_price" value="{{ old('sale_price') }}" class="form-control" required>
+                @error('code')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+                
             </div>
             <div class="form-group">
-                <label for="stock">Stock</label>
-                <input type="number" name="stock" id="stock" required>
+                <label for="name" class="form-label">Stock</label>
+                <input type="text" name="stock" id="stock" value="{{ old('stock') }}" class="form-control" required>
+                @error('code')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+               
             </div>
             <div class="form-group">
+                <label for="name" class="form-label">Category</label>
+                <input type="text" name="category_id" id="category_id" value="{{ old('stock') }}" class="form-control" required>
+                @error('code')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
                 <label for="category_id">Category</label>
                 <select name="category_id" id="category_id" required>
                     @foreach($categories as $category)

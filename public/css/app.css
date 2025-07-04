@@ -1,4 +1,4 @@
-@import 'variables.css';
+/* @import 'variables.css';
 @import 'reset.css';
 @import 'app-bar.css';
 @import 'sidebar.css';
@@ -10,4 +10,7 @@
 @import 'products.css';
 @import 'dashboard.css';
 @import 'customers.css';
-@import 'styles.css';
+@import 'styles.css'; */
+@import 'sidebar.css';
+@import 'user-list.css';
+@import 'form.css';
