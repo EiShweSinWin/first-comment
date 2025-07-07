@@ -3,8 +3,15 @@
 @section('content')
    
     <div class="form-container">
-        <form method="POST" action="{{ route('admin.products.store') }}">
+        <form method="POST" action="{{ route('admin.products.store') }}" enctype="multipart/form-data">
             @csrf
+            <div class="form-group">
+                <label for="image" class="form-label">Image</label>
+                <input type="file" name="image" id="image" class="form-control" accept="image/*">
+                @error('image')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
             <div class="form-group">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" name="name" id="name" value="{{ old('name') }}" class="form-control" required>
@@ -46,11 +53,7 @@
                
             </div>
             <div class="form-group">
-                <label for="name" class="form-label">Category</label>
-                <input type="text" name="category_id" id="category_id" value="{{ old('stock') }}" class="form-control" required>
-                @error('code')
-                    <span class="text-danger">{{ $message }}</span>
-                @enderror
+                
                 <label for="category_id">Category</label>
                 <select name="category_id" id="category_id" required>
                     @foreach($categories as $category)

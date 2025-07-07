@@ -1,0 +1,208 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* App Bar */
+.app-bar {
+    background-color: #f0fff4;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-bar .logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2d6a4f;
+}
+
+.app-bar .nav-links a {
+    color: #2d6a4f;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.app-bar .nav-links a:hover {
+    color: #1a3c34;
+}
+
+.app-bar .logout a {
+    color: #2d6a4f;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.app-bar .logout a:hover {
+    color: #1a3c34;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 16rem;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Best Sellers & Products Sections */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #2d6a4f;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    border: 1px solid #e5e7eb;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.card h3 {
+    margin-top: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.card p {
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+/* Promotion Section */
+.promotion {
+    background-color: #ecfdf5;
+    padding: 2rem;
+    text-align: center;
+}
+
+.promotion h2 {
+    font-size: 1.5rem;
+    color: #2d6a4f;
+    margin-bottom: 1rem;
+}
+
+.promotion p {
+    margin-bottom: 1rem;
+    color: #374151;
+}
+
+.promotion a {
+    background-color: #16a34a;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.promotion a:hover {
+    background-color: #15803d;
+}
+
+/* Footer */
+.footer {
+    background-color: #14532d;
+    color: #fff;
+    padding: 2rem 1rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.footer h3 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.footer p,
+.footer a {
+    color: #d1fae5;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer .payment-icons img {
+    height: 2rem;
+    margin-right: 0.5rem;
+}

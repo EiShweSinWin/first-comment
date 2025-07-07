@@ -17,19 +17,25 @@ class AuthController extends Controller
     }
 
     public function login(Request $request)
-    {
-        $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
+{
+    $credentials = $request->validate([
+        'email' => 'required|email',
+        'password' => 'required',
+    ]);
 
-        if (auth()->attempt($credentials)) {
+    if (auth()->attempt($credentials)) {
+        $user = auth()->user(); 
+
+       
+        if ($user->role === 'User') {
+            return redirect()->intended('home');
+        } elseif ($user->role === 'Admin') {
             return redirect()->intended('/admin/dashboard');
         }
-
-        return back()->withErrors(['email' => 'Invalid credentials']);
     }
 
+    return back()->withErrors(['email' => 'Invalid credentials']);
+}
     public function showForgotPasswordForm()
     {
         return view('auth.forgot-password');

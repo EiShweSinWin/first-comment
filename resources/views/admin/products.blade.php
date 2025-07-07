@@ -30,7 +30,11 @@
             <tbody>
                 @foreach($products as $product)
                     <tr>
+                        <td>
+                            <img src="{{ $product->image ? asset('storage/' . $product->image) : asset('images/default.jpg') }}" alt="{{ $product->name }}" class="product-image">
+                        </td>
                         <td>{{ $product->id }}</td>
+            
                         <td>{{ $product->name }}</td>
                         <td>{{ $product->category->name }}</td>
                         <td>{{ $product->purchase_price }}</td>

@@ -141,7 +141,10 @@ class AdminController extends Controller
 
     public function storeProduct(Request $request)
     {
-        Product::create($request->validate([
+       
+
+
+        $request->validate([
             'name' => 'required|string|max:255',
             'code' => 'required|string|unique:products,code',
             'purchase_price' => 'required|numeric',
@@ -149,8 +152,28 @@ class AdminController extends Controller
             'stock' => 'required|integer',
             'category_id' => 'required|exists:categories,id',
             'description' => 'nullable|string',
-        ]));
-        return redirect()->route('admin.products')->with('success', 'Product created successfully');
+            'image' => 'nullable|image|max:2048', // Max 2MB
+        ]);
+
+        // Handle image upload
+        $imagePath = null;
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('products', 'public');
+        }
+
+        // Create the product
+        $product = Product::create([
+            'name' => $request->name,
+            'code' => $request->code,
+            'purchase_price' => $request->purchase_price,
+            'sale_price' => $request->sale_price,
+            'stock' => $request->stock,
+            'category_id' => $request->category_id,
+            'description' => $request->description,
+            'image' => $imagePath, // Store the image path
+        ]);
+
+        return redirect()->route('admin.products')->with('success', 'Product created successfully!');
     }
 
     public function updateProduct(Request $request, $id)
